@@ -1,0 +1,256 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    overflow-x: hidden;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+   
+
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 200px;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+   
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Background Section */
+.background {
+    background: url('img9.gif');
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    color: white;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.background h1,
+.background h2,
+.background p,
+.background button {
+    position: relative;
+    z-index: 2;
+}
+
+.background h2 {
+    color: red;
+}
+
+.background button {
+    color: white;
+    padding: 15px 30px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.background button:hover {
+    background-color: darkred;
+}
+
+/* Product Section */
+.arrange {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.member, .member2, .member3 {
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.member img, .member2 img, .member3 img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.member:hover img, .member2:hover img, .member3:hover img {
+    transform: scale(1.05);
+}
+
+.cap, .cap2, .cap3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.member:hover .cap, .member2:hover .cap2, .member3:hover .cap3 {
+    opacity: 1;
+}
+
+.cap button, .cap2 button, .cap3 button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cap button:hover, .cap2 button:hover, .cap3 button:hover {
+    background-color: darkred;
+}
+
+/* Sales Section */
+.topsales {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.dd {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sales {
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.sales img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sales button {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sales button:hover {
+    background-color: white;
+    color: palevioletred;
+    border: 1px solid palevioletred;
+}
+#contact{
+    background-color: black;
+    color: white;
+    height: 50px;
+
+}
+
+/* Responsive Product Section */
+@media (max-width: 1024px) {
+    .member, .member2, .member3 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .member, .member2, .member3 {
+        width: 90%;
+    }
+}
+0
